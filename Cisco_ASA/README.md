@@ -4,6 +4,15 @@ Introduction
 ================
 Parse ASA 5505 syslog entries and display tcp/udp connections break-down by host 
 
+Usage
+================
+1. Configure ASA 5505 to send syslog and a syslogd daemon to receive logs. Preferred to redirect to a dedicate log file (like /var/log/asa.log). Refer to syslogd manual
+2. Run "tail -F /var/log/asa.log | asa_realtime_mon.py"
+
+Limitation
+================
+* Need a syslogd to receive log data from ASA
+* Check Build/Tear-down TCP/UDP connection only
 
 Sample Output
 ================
